@@ -37,7 +37,7 @@ plt.subplot(2,2,2)
 plt.scatter(pca_features[:,0], pca_features[:,1], c=target,marker='o',cmap='viridis')
 
 
-ClassificadorPCA = MLPClassifier(hidden_layer_sizes = (10), alpha=1, max_iter=1000)
+ClassificadorPCA = MLPClassifier(hidden_layer_sizes = (500, 250, 125, 70), alpha=1, max_iter=50000)
 ClassificadorPCA.fit(pca_features,target)
 
 
